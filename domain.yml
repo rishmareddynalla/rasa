@@ -1,0 +1,61 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - busy
+  - email_subscribe
+  - offers
+  - news
+  - business_news
+  - sports_news
+  - crypto_news
+  
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_email_subscribe:
+  - text: "Please enter your email id"
+
+  utter_offers:
+  - text: "We have 50% offer"
+
+  utter_news:
+  - text: "omicron cases are raised by 20% compared to the previous month"
+
+  utter_business_news:
+  - text: "today nifty was started with a loss of 4% compared to yesterday"
+  - text: "gold prices were increased by 10000"
+  
+  utter_sports_news:
+  - text: "ipl was postponed in the view of increasing covid cases"
+  - text: "cricket is the most viewed sport in the last 2 years"
+
+  utter_crypto_news:
+  - text: "Bitcoin is a decentralized digital currency, without a central bank or single administrator, that can be sent from user to user on the peer-to-peer bitcoin network "
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

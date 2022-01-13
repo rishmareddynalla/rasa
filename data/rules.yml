@@ -1,0 +1,29 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: say business news anytime users says business
+  steps:
+  - intent: business_news
+  - action: utter_business_news
+
+- rule: say sports news anytime user says sports
+  steps:
+  - intent: sports_news
+  - action: utter_sports_news
+  
+- rule: say crypto news anytime user says crypto
+  steps: 
+  - intent: crypto_news
+  - action: utter_crypto_news
+

@@ -1,0 +1,92 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: busy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: busy
+  - action: utter_goodbye
+
+- story: offer subscribe
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: offers
+  - action: utter_offers
+  - intent: email_subscribe
+  - action: utter_email_subscribe
+
+- story: news
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: news
+  - action: utter_news
+
+- story: business news
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: news
+  - action: utter_news
+  - intent: business_news
+  - action: utter_business_news
+
+- story: sports news
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: news
+  - action: utter_news
+  - intent: sports_news
+  - action: utter_sports_news
+
+- story: crypto news
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: news
+  - action: utter_news
+  - intent: crypto_news
+  - action: utter_crypto_news
+
+- story: business news
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: news
+  - action: utter_news
+  - intent: business_news
+  - action: utter_business_news
+  - intent: sports_news
+  - action: utter_sports_news
+
